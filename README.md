@@ -47,4 +47,5 @@ for i in range(len(paths)):
 <br />
 Cosine similarity metric is used for UMAP.<br />
 Used CLIP model: https://huggingface.co/openai/clip-vit-large-patch14-336<br />
-To help understanding of how UMAP hyperparameters control projection: https://pair-code.github.io/understanding-umap/
+To help understanding of how UMAP hyperparameters control projection: https://pair-code.github.io/understanding-umap/<br />
+https://umap-learn.readthedocs.io/en/latest/parameters.html
