@@ -42,12 +42,14 @@ class imageDataset(Dataset):
     def __getitem__(self, index):
         path=self.image_paths[index]
         image=Image.open(r'{}'.format(path)).resize((336,336))
-        if image.mode!="RGB":
+        if image.mode=="L":
+            image = Image.merge("RGB", (image, image, image))
+        elif image.mode!="RGB":
             try:
                 image=image.convert("RBG")
             except:
                 image=rgba2rgb(np.array(image))
-                return image, path
+                return image
         return np.array(image)
 
 
