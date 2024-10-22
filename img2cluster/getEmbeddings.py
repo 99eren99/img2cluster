@@ -46,7 +46,7 @@ class imageDataset(Dataset):
             image = Image.merge("RGB", (image, image, image))
         elif image.mode!="RGB":
             try:
-                image=image.convert("RBG")
+                image=image.convert("RGB")
             except:
                 image=rgba2rgb(np.array(image))
                 return image
